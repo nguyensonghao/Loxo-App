@@ -1,0 +1,29 @@
+<div class="result-game-container">
+	<p class="title-result">You answered correctly {{numberCorrect}}/{{totalQuestion}}</p>
+	<p class="rate-result">Very bad! Please study more</p>
+	<div class="box-result">
+		<div class="title-topic">
+			<p>Adjective</p>
+		</div>
+
+		<div class="percent">
+			<div class="c100 p20 small">
+				<span>20%</span>
+				<div class="slice">
+					<div class="bar"></div>
+					<div class="fill"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-box">
+			<button ion-button color="light" (click)="goBack()">Back</button>
+			<button ion-button color="light">Continue</button>
+		</div>
+	</div>
+
+	<div class="note">
+		<a>If you like this app, please rate it</a>
+		<a>If you have proplem, please let us know</a>
+	</div>
+</div>

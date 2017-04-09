@@ -1,0 +1,38 @@
+<ion-header>
+  	<ion-navbar color="primary">
+    	<ion-title>{{title}}</ion-title>
+    	<ion-buttons end>
+      		<button ion-button icon-only (click)="showSetting($event)">
+        		<ion-icon name="md-settings"></ion-icon>
+      		</button>      
+    	</ion-buttons>
+  	</ion-navbar>
+</ion-header>
+
+<type-card (changeType)="changeType($event)" 
+	[size]="size"
+	[type]="type" (goLearn)="goLearn($event)">
+</type-card>
+
+<ion-content>	
+	<div class="list-question">
+		<div class="title">
+			<span>?</span>
+			<p>All questions</p>
+		</div>
+		<ion-list class="list-card">
+			<div class="card-item" *ngFor="let card of listCard; let i = index">
+				<div class="word">
+					<span>{{i + 1}}. </span>
+					<div [outerHTML]="card.frontText | decode"></div>
+				</div>
+
+				<div class="mean" [outerHTML]="card.backText | decode"></div>
+			</div>
+		</ion-list>
+
+		<ion-infinite-scroll (ionInfinite)="loadMoreTopic($event)" *ngIf="showMore">
+			<ion-infinite-scroll-content></ion-infinite-scroll-content>
+		</ion-infinite-scroll>
+	</div>
+</ion-content>

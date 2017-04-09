@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar color="primary">        
+        <ion-title>Feedback</ion-title>        
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-item>
+	    <ion-label floating>Mesage</ion-label>
+	    <ion-input type="text" [(ngModel)]="message"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label floating>Email</ion-label>
+	    <ion-input type="email" [(ngModel)]="email"></ion-input>
+	</ion-item>
+
+	<button ion-button class="button-custom" (click)="send()">Send</button>
+	<button ion-button color="light" class="button-custom" (click)="cancel()">Cancel</button>
+</ion-content>

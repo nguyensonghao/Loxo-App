@@ -1,0 +1,17 @@
+<div class="multi-choice-container">
+	<div class="question-box">
+		<p>{{game.question.text | decode}}</p>
+	</div>
+
+	<div class="answer-box">
+		<ion-list>
+			<ion-item *ngFor="let answer of game.listAnswer" 
+				(click)="choiceResult(answer, game)"
+				[ngClass]="listAnswer[answer.text]">
+
+				<ion-icon name="{{genIconName(listAnswer[answer.text])}}"></ion-icon>
+				<span>{{answer.text | decode}}</span>
+			</ion-item>
+		</ion-list>
+	</div>
+</div>

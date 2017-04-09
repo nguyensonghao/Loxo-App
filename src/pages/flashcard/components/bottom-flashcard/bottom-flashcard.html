@@ -1,0 +1,11 @@
+<ion-row class="bottom-card">
+    <ion-col col-4 (click)="showHint($event, card)">
+        <ion-icon name="ios-bulb-outline" class="button-suggest"></ion-icon>
+    </ion-col>
+    <ion-col col-4>
+        <ion-icon name="md-redo" class="button-flip"></ion-icon>
+    </ion-col>
+    <ion-col col-4 (click)="sound($event, card)">
+        <ion-icon name="{{soundIcon}}" class="button-sound"></ion-icon>
+    </ion-col>
+</ion-row>

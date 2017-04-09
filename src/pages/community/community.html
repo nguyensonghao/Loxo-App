@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Discussion</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-notifications"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-tabs tabsPlacement="top" color="primary" tabsHighlight="true">
+	  	<ion-tab [root]="tabDiscussion" tabTitle="Discussion"></ion-tab>
+	  	<ion-tab [root]="tabRanking" tabTitle="Ranking"></ion-tab>
+	  	<ion-tab [root]="tabFriends" tabTitle="Friends"></ion-tab>
+	</ion-tabs>
+</ion-content>

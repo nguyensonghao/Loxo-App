@@ -1,0 +1,52 @@
+<ion-header>
+  	<ion-navbar color="primary">
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>TOEIC</ion-title>
+        <ion-buttons end class="right-button">
+            <button ion-button icon-only (click)="goPage('search')">
+                <ion-icon name="md-search"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-share"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-notifications"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<profile></profile>
+
+<ion-content padding *ngIf="loadDone" class="has-profile">
+	<ion-tabs tabsPlacement="top" tabsHighlight="true">
+	  	<ion-tab *ngFor="let page of listTopicPage" 
+	  		[root]="page.page"
+	  		[rootParams]="page.topicId"
+	  		tabTitle="{{page.title | uppercase}}">
+	  	</ion-tab>
+	</ion-tabs>
+</ion-content>
+
+<ion-footer>
+  	<ion-row>
+  		<ion-col col-3 (click)="goPage('calendar')">
+  			<ion-icon name="md-calendar"></ion-icon>
+            <p>Calendar</p>
+  		</ion-col>
+  		<ion-col col-3 (click)="goPage('challenge')">
+  			<ion-icon name="md-analytics"></ion-icon>
+            <p>Challenge</p>
+  		</ion-col>
+  		<ion-col col-3 (click)="goPage('community')">
+  			<ion-icon name="md-people"></ion-icon>
+            <p>Community</p>
+  		</ion-col>
+  		<ion-col col-3 (click)="goPage('stats')">
+  			<ion-icon name="md-trending-up"></ion-icon>
+            <p>Stats</p>
+  		</ion-col>
+  	</ion-row>
+</ion-footer>

@@ -1,0 +1,36 @@
+<div class="header-main">
+    <ul class="list-type">
+        <li class="all large" (click)="change(1)" [ngClass]="type == 1 ? 'active' : ''">
+            {{size}}
+            <ion-icon name="md-pricetag"></ion-icon>
+        </li>
+        <li class="red" (click)="change(1)" [ngClass]="type == 1 ? 'active' : ''">
+            0
+            <ion-icon name="md-pricetag"></ion-icon>
+        </li>
+        <li class="yellow" (click)="change(2)" [ngClass]="type == 2 ? 'active' : ''">
+            0
+            <ion-icon name="md-pricetag"></ion-icon>
+        </li>
+        <li class="origin" (click)="change(3)" [ngClass]="type == 3 ? 'active' : ''">
+            0
+            <ion-icon name="md-pricetag"></ion-icon>
+        </li>
+        <li class="green" (click)="change(4)" [ngClass]="type == 4 ? 'active' : ''">
+            0
+            <ion-icon name="md-pricetag"></ion-icon>
+        </li>
+        <li class="blue" (click)="change(5)" [ngClass]="type == 5 ? 'active' : ''">
+            0
+            <ion-icon name="md-star"></ion-icon>
+        </li>
+        <li class="gray large" (click)="change(6)" [ngClass]="type == 6 ? 'active' : ''">
+            0
+        </li>
+    </ul>
+
+    <button ion-button class="button-start" (click)="startGame()">
+        <ion-icon name="md-game-controller-b"></ion-icon>
+        <span>Start now</span>
+    </button>
+</div>

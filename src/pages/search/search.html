@@ -1,0 +1,58 @@
+<ion-header>
+  	<ion-navbar color="primary">
+    	<ion-title>Search/Import</ion-title>
+
+    	<ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-notifications"></ion-icon>
+            </button>
+        </ion-buttons>
+  	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-input type="text" placeholder="Search" class="search-box"></ion-input>
+	<div class="choose-type">
+		<ion-row>
+			<ion-col col-5 class="item-choose">
+				<span color="primary" >Search</span>
+  				<ion-checkbox color="primary" [(ngModel)]="searchType" (ionChange)="chooseSearch()">
+  				</ion-checkbox>
+			</ion-col>
+			<ion-col col-2>
+				<span>OR</span>
+			</ion-col>
+			<ion-col col-5 class="item-choose">
+				<span color="primary">Import</span>
+  				<ion-checkbox color="primary" [(ngModel)]="importType" (ionChange)="chooseImport()">
+  				</ion-checkbox>
+			</ion-col>
+		</ion-row>
+	</div>
+
+	<div class="box-action">
+		<button ion-button [hidden]="!searchType">Search</button>
+
+		<div class="box-import" [hidden]="searchType">
+			<ion-list>
+				<ion-item>
+				  	<ion-label>Quizlet</ion-label>
+				  	<ion-checkbox color="primary"></ion-checkbox>
+				</ion-item>
+
+				<ion-item>
+				  	<ion-label>CourseHero</ion-label>
+				  	<ion-checkbox color="primary"></ion-checkbox>
+				</ion-item>
+
+				<ion-item>
+				  	<ion-label>Include private cards</ion-label>
+				  	<ion-toggle checked="false"></ion-toggle>
+				</ion-item>
+			</ion-list>
+
+			<button ion-button>Import</button>
+		</div>
+	</div>	
+</ion-content>

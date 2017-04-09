@@ -1,0 +1,39 @@
+page-register {
+	ion-content {
+		background: #387ef5 !important;
+		text-align: center;
+		padding: 40px 20px;
+
+		.content {
+			margin: 30px 20px;
+		}
+
+		.title-page {
+			font-size: 28px;
+		    color: white;
+		    font-weight: bold;
+		    margin-bottom: 30px;
+		    margin-top: 50px;
+		}
+
+		ion-item {
+			margin-bottom: 10px !important;
+		}
+
+		.note {
+			color: white;
+    		font-size: 12px;
+		}
+
+		.button-register {
+			margin-bottom: 30px;
+			text-transform: capitalize;
+    		color: #387ef5 !important;
+		}
+
+		.go-login {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+}

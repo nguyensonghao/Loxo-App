@@ -1,0 +1,76 @@
+page-game {	
+	.active-match {
+		background: #387EF5 !important;
+		color: white !important;
+	}
+
+	.practice-container > .scroll-content {
+		margin-top: 122px !important;
+	}	
+
+	.practice-container.not-padding > .scroll-content {
+		margin-top: 60px !important;
+	}
+
+	.none {
+		height: 0;
+		overflow: hidden;
+	}
+
+	.right-button {
+		width: 110px !important;
+	}
+
+	.none-click {
+        pointer-events: none;
+    }    
+
+	ion-item.wrong-answer {
+		border: 1px solid #e64040;
+		span {
+			color: #e64040;
+		}
+
+		ion-icon {
+			color: #e64040;
+		}
+	}               
+
+	ion-item.correct-answer {
+		border: 1px solid #2ec95c;
+		span {
+			color: #2ec95c;
+		}
+
+		ion-icon {
+			color: #2ec95c;
+		}
+	}
+
+	.answer-box {
+		ion-list.list {
+			padding-left: 4px;
+
+			ion-item {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	.alert-head {
+		background: #3474e1;
+		text-align: center !important;
+		padding: 10px !important;
+		color: white;
+
+		h2 {
+			font-size: 16px !important;
+		}
+	}
+
+	.alert-message {
+		color: black !important;
+		padding-top: 10px !important;
+		text-align: center !important;
+	}
+}

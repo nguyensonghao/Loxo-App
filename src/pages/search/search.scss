@@ -1,0 +1,29 @@
+page-search {
+	.search-box {
+		border: 1px solid #ddd;
+    	border-radius: 20px;
+	}
+
+	.choose-type {
+		margin-top: 16px;
+		margin-bottom: 16px;
+
+		ion-col {
+			text-align: center;
+		}
+
+		.item-choose {
+			border-bottom: 1px solid #ddd;    		
+
+			span {
+				position: relative;
+			    top: -3px;
+			    right: 6px;
+			}
+		}
+	}
+
+	.box-action {
+		text-align: center;
+	}
+}

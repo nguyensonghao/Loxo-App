@@ -1,0 +1,24 @@
+page-login {
+	.content {
+		text-align: center;
+		color: white;
+		background: #387ef5;
+	}
+
+	.button-login-facebook {
+		background-color: #0741a2 !important;
+
+		ion-icon {
+			font-size: 28px;
+		    margin-right: 10px;
+		}
+	}
+
+	a {
+		color: white;
+	}
+
+	.button-login {
+		margin-bottom: 20px;
+	}
+}

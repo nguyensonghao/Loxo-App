@@ -1,0 +1,29 @@
+<div class="side-header">
+  	<div class="index-item side-header-item">
+		<span class="percent-index">{{ index + 1 }}/{{ listIndex.length }}</span>		
+		<div class="list-o">
+			<span class="o"></span>
+			<span class="o"></span>
+			<span class="o"></span>
+			<span class="o"></span>
+			<span class="o"></span>
+		</div>
+	</div>	
+
+	<div class="list-page side-header-item">
+		<ul>
+			<li class="page"				
+				*ngFor="let item of listIndex; let i = index" 
+				[ngClass]="i == index ? 'active' : ''" 
+				class={{getClass(item.status)}}
+				(click)="changePageItem(i)">
+				<span>{{ i + 1 }}</span>
+			</li>			
+		</ul>
+	</div>
+
+	<div class="favorite side-header-item">
+		<ion-icon name="md-pricetag" [hidden]="currentGame.gameType == 'GAME_MATCHING'"></ion-icon>
+		<span class="number-times" [hidden]="currentGame.gameType != 'GAME_MATCHING'">{{currentGame.numberChoice}} times left</span>
+	</div>
+</div>

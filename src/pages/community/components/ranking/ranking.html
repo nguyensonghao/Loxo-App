@@ -1,0 +1,19 @@
+<ion-content padding>	
+	<ion-list class="list-user">
+		<div class="user" *ngFor="let rank of listRank">
+			<ion-row>
+				<ion-col col-6>
+					{{ rank.userName }}
+				</ion-col>
+
+				<ion-col col-3>
+					{{ rank.level }}
+				</ion-col>
+
+				<ion-col col-3>
+					{{ rank.exp }}
+				</ion-col>
+			</ion-row>
+		</div>
+	</ion-list>
+</ion-content>

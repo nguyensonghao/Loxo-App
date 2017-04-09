@@ -1,0 +1,20 @@
+<ion-content>	
+	<ion-list class="list-box">
+		<!-- <div class="item-first list-item" (click)="goDetail(topic)" 
+        *ngFor="let topic of listTopic"> -->
+        <div class="item-first list-item" (click)="goCard(topic)" 
+        *ngFor="let topic of listTopic">
+            <div class="chart">
+                <process-topic [percent]="25"></process-topic>
+            </div>
+            <div class="detail">
+                <p class="name">{{topic.name}}</p>
+                <p class="total">{{topic.totalCardNum}} questions</p>
+            </div>
+		</div>
+	</ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="loadMoreTopic($event)" *ngIf="showMore">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

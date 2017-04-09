@@ -1,0 +1,32 @@
+wrong-answer-box {
+	.wrong-box-container {
+		position: fixed;	    
+	    width: 100%;
+	    padding: 6px;
+	    background: #ffefdc;
+    	color: #fd712e;
+	    bottom: -280px;	    
+	    -webkit-box-shadow: 1px 0px 14px -3px rgba(0,0,0,0.75);
+		-moz-box-shadow: 1px 0px 14px -3px rgba(0,0,0,0.75);
+		box-shadow: 1px 0px 14px -3px rgba(0,0,0,0.75);
+		-webkit-transition: bottom 0.3s;
+    	transition: bottom 0.3s;
+
+		.title {
+			font-size: 18px;
+    		font-weight: bold;
+    		margin-top: 0;
+
+    		ion-icon {
+    			font-size: 24px;
+			    position: relative;
+			    top: 3px;
+			    margin-right: 4px;
+    		}
+		}
+	}
+
+	.show-box {
+		bottom: 20px;
+	}
+}

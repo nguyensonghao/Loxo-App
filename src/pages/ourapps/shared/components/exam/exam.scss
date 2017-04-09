@@ -1,0 +1,33 @@
+page-exam {
+	.exam-item {
+		position: relative;
+		padding: 6px;
+		border-bottom: 1px solid #ddd;
+		overflow: auto;
+
+		button {
+			text-transform: capitalize;
+    		font-size: 12px;
+
+    		ion-icon {
+    			font-size: 16px;
+    			margin-right: 4px;
+    		}
+		}
+
+		.right {
+		    float: right;
+		}
+
+		.flag {
+			width: 60px;
+			height: 60px;
+		}
+
+		.name {
+			position: relative;
+		    top: -24px;
+		    left: 10px;
+		}
+	}
+}

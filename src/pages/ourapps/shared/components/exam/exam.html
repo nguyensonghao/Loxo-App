@@ -1,0 +1,17 @@
+<ion-content>
+	<ion-list class="list-exam">
+		<div class="exam-item" *ngFor="let exam of listExam">
+			<div class="right">
+				<button ion-button small>
+					<ion-icon name="md-download"></ion-icon> Install
+				</button>
+				<br>
+				<button ion-button small>
+					<ion-icon name="md-share"></ion-icon> Share
+				</button>
+			</div>
+			<img src="" class="flag">
+			<span class="name">{{ exam.name  }}</span>
+		</div>
+	</ion-list>
+</ion-content>

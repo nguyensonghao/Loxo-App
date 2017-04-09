@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Study</ion-title>
+        <ion-buttons end>
+      		<button ion-button icon-only (click)="showSetting($event)">
+        		<ion-icon name="md-settings"></ion-icon>
+      		</button>      
+    	</ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-gray">
+    <p class="sub-title">
+        You have {{numberQuestion}} new questions, study them first before practicing. Tap on each question to show the answer
+    </p>
+
+    <ion-list>
+        <div class="flashcard-item flip-container" *ngFor="let card of listCard; let i = index"
+            [ngClass]="listClassCard[i]" (click)="flipCard(i)">
+            <div class="flipper">
+                <div class="front flash-box flash-box-front">
+                    <div class="flash-box-item flash-box-after">
+                        <span class="type">Q</span>
+                        <h3 class="word">{{ card.frontText | decode}}</h3>
+                        <bottom-flashcard [card]="card" [type]="'front'"></bottom-flashcard>                        
+                    </div>
+                </div>
+                <div class="back flash-box flash-box-after">
+                    <div class="flash-box-item">
+                        <span class="type">A</span>
+                        <p class="word">{{ card.backText | decode }}</p>
+                        <bottom-flashcard [card]="card" [type]="'back'"></bottom-flashcard>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer (click)="goPractice()">
+    <ion-toolbar color="primary">
+        <ion-title>Practice</ion-title>
+    </ion-toolbar>
+</ion-footer>

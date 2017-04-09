@@ -1,0 +1,124 @@
+.header-main {
+	text-align: center;	
+	z-index: 10;
+    position: absolute;    
+    width: 100%;
+    top: 56px;
+	.active::before {
+	    height: 0;
+	    border-left: 5px solid transparent;
+	    border-right: 5px solid transparent;
+	    border-top: 5px solid #737373;
+	    content: "";
+	    position: absolute;
+	    top: -8px;			    
+	    left: 8px;
+	}
+
+	.active.large::before {
+		left: 15px;
+	}
+
+	.list-type {
+		padding: 0px;
+
+		li {		
+		    list-style: none;
+		    width: 28px;
+		    height: 32px;
+		    border: 1px solid #ddd;
+		    border-radius: 18px;
+		    line-height: 32px;
+		    text-align: center;
+		    margin: 4px;
+		    position: relative;
+		    display: inline-block;
+		    cursor: pointer;
+
+		    ion-icon {
+		    	-ms-transform: rotate(45deg);
+			    -webkit-transform: rotate(45deg);
+			    transform: rotate(45deg);
+			    position: absolute;
+			    bottom: -9px;
+			    font-size: 20px;
+			    right: -2px;
+		    }
+		}
+	}
+
+	.red {
+		border-color: #ce0c0c !important;
+		ion-icon {
+			color: #ce0c0c !important;
+		}
+	}
+
+	.yellow {
+		border-color: #e8e100 !important;
+		ion-icon {
+			color: #e8e100 !important;
+		}
+	}
+
+	.origin {
+		border-color: orange !important;
+		ion-icon {
+			color: orange !important;
+		}
+	}
+
+	.green {
+		border-color: #5fd44b !important;
+		ion-icon {
+			color: #5fd44b !important;
+		}
+	}
+
+	.blue {
+		border-color: #387ef5 !important;
+		ion-icon {
+			color: #387ef5 !important;
+			-ms-transform: rotate(0deg) !important;
+		    -webkit-transform: rotate(0deg) !important;
+		    transform: rotate(0deg) !important;
+		}		 
+	}
+
+	.gray {
+		border-color: #424242 !important;
+		ion-icon {
+			color: #424242 !important;
+		}
+	}
+
+	.large {
+	    width: 42px !important;
+	    height: 42px !important;
+	    border-radius: 21px !important;
+	    line-height: 42px !important;
+	    margin-top: 0px !important;
+	}
+
+	.all {
+		background: #50a5fd;
+	    border-color: #50a5fd !important;
+	    color: white;
+	    ion-icon {
+			color: #387ef5 !important;
+		}
+	}
+
+	.button-start { 
+		margin-top: 16px;
+
+		span {
+			text-transform: none;
+	    	margin-left: 6px;
+	    }
+
+	    ion-icon {
+	    	font-size: 24px;
+	    }
+	}
+}

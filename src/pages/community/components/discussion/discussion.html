@@ -1,0 +1,26 @@
+<ion-content padding>
+	<ion-list class="list-comment">
+		<div class="comment" *ngFor="let comment of listComment">
+			<img [src]="comment.avatar" class="avatar">
+			<div class="content">
+				<p class="username">{{ comment.username }}</p>
+				<p class="msg">{{ comment.content }}</p>
+				<div class="meta">
+					<span class="date">{{ comment.date }}</span>
+					<span class="like-button tag">Like</span>
+					<span class="tag">-</span>
+					<span class="reply-button tag">Reply</span>
+					<span class="tag">-</span>
+					<span class="like-number">0 likes</span>
+				</div>
+			</div>			
+		</div>
+	</ion-list>
+</ion-content>
+
+<ion-footer color="gray">
+	<div class="enter-message">
+		<ion-input type="text" placeholder="Write a comment"></ion-input>
+		<ion-icon name="md-send"></ion-icon>
+	</div>
+</ion-footer>

@@ -1,0 +1,43 @@
+page-setting {
+	.main-title {
+		color: black;
+	}
+
+	.sub-title {
+		font-style: italic;
+	    font-size: 12px;
+	    color: gray;
+	}
+
+	.item-inner {
+		border-bottom: 1px solid #387ef5;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+
+	.has-select {
+		.item-inner {
+			padding-bottom: 30px;
+
+			.select-item {
+				position: absolute;
+				right: 16px;
+				bottom: 10px;
+				height: 28px;
+				font-size: 16px !important;
+			}
+		}
+	}	
+
+	.select-right {
+		float: right;
+    	height: 28px;
+		color: black;
+	}
+
+	.item-select {
+		.label-md {
+			white-space: normal;
+		}
+	}
+}

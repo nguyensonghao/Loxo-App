@@ -1,0 +1,111 @@
+side-header {
+    .side-header {
+		overflow: auto;
+    	padding-top: 4px;
+		z-index: 2;
+		margin-top: 56px;
+		position: relative;
+	}
+
+    .side-header-item {
+		float: left;
+	}
+
+    .right-button {
+		width: 120px !important;
+	}
+	
+	.index-item {
+		text-align: center;
+		width: 52px;
+	}
+
+	span.o {
+	    width: 6px;
+	    height: 6px;
+	    border: 1px solid #424242;
+	    border-radius: 3px;
+	    display: inline-block;
+	}
+
+	.percent-index {
+		font-size: 12px;
+		color: black;
+	}	
+
+	.list-page {
+        width: calc(100% - 110px);
+	    height: 62px;
+        overflow: auto;
+        overflow-y: hidden;        
+
+        ul {
+            padding: 0;
+            margin-top: 8px;
+            white-space: nowrap;
+            width: 100%;
+
+            .page {
+                display: inline-block;                
+                margin: 2px;
+                border: 1px solid black;
+                text-align: center;
+                line-height: 28px;
+				height: 28px;
+    			width: 28px;
+                position: relative;
+                list-style: none;
+            }
+
+            .active::before {
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 8px solid #222;
+                position: absolute;
+                bottom: -8px;
+                left: 8px;
+                content: ""
+            }
+
+			.answer-wrong {
+				background: #fd8d1b;
+				border-color: #fd8d1b;
+				color: white;
+			}
+
+			.answer-correct {
+				background: #21b521;
+				border-color: #21b521;
+				color: white;
+			}
+        }        
+	}
+
+	.list-o {
+	    overflow: auto;
+	}
+
+	.favorite {		
+		width: 56px;
+	    text-align: right;
+	    padding-right: 6px;
+
+		ion-icon {
+			font-size: 28px;
+			color: gray;
+			margin-top: 4px;
+			-ms-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}	
+
+	.number-times {
+		font-size: 10px;
+		color: black;		
+		position: relative;
+		top: 14px;
+	}
+}

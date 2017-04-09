@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Review calendar</ion-title>
+        <ion-buttons end>            
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-settings"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-notifications"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <p class="note">
+        Based on your Practice results, daily reviews are schedules in order to optimize your memorization    
+    </p>
+
+    <p class="date">3/2017</p>
+
+    <calendar [eventSource]="eventSource"
+        [calendarMode]="calendar.mode"
+        [currentDate]="calendar.currentDate"
+        (onCurrentDateChanged)="onCurrentDateChanged($event)"
+        (onRangeChanged)="reloadSource(startTime, endTime)"
+        (onEventSelected)="onEventSelected($event)"
+        (onTitleChanged)="onViewTitleChanged($event)"
+        (onTimeSelected)="onTimeSelected($event)"
+        step="30">
+    </calendar>
+
+    <p class="number-question">
+        0 questions need your review today
+    </p>
+
+    <button ion-button color="primary" class="start-now">Start now</button>
+</ion-content>

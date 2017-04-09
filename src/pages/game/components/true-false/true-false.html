@@ -1,0 +1,28 @@
+<div class="true-false-container">
+	<div class="question-box">
+		<div class="box-top box" [ngClass]="box">
+			<p>{{game.question.text | decode}}</p>			
+		</div>
+
+		<div class="convert">
+			<ion-icon name="md-arrow-round-down" [ngClass]="correctIcon"></ion-icon>
+			<ion-icon name="md-arrow-round-up" [ngClass]="correctIcon"></ion-icon>
+			<ion-icon name="md-close" *ngIf="box == 'box-wrong'"></ion-icon>
+		</div>
+
+		<div class="box-bottom box" [ngClass]="box">			
+			<p>{{game.answer.text | decode}}</p>
+		</div>
+	</div>
+
+	<div class="answer-box">
+		<button ion-button color="danger" class="button-false" (click)="choice(false)" [disabled]="game.endGame">
+			<ion-icon name="md-close"></ion-icon>
+			False
+		</button>
+		<button ion-button color="secondary" class="button-true" (click)="choice(true)" [disabled]="game.endGame">
+			<ion-icon name="md-checkmark"></ion-icon>
+			True
+		</button>
+	</div>
+</div>

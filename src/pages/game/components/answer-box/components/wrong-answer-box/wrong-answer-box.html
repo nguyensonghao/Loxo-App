@@ -1,0 +1,27 @@
+<div class="wrong-box-container" [ngClass]="showAnswer">
+	<div class="sentence-result-box" *ngIf="typeGame == 'GAME_SENTENCES' && result">
+		<p>Result: {{result['numberCorrect']}} Correct - {{result['totalQuestion'] - result['numberCorrect']}} Incorrect</p>
+	</div>
+
+	<div class="multi-choices-result-box" *ngIf="typeGame == 'GAME_MULTICHOICES' || typeGame == 'GAME_TRUE_FALSE'">
+		<p class="title">
+			<ion-icon name="md-close-circle"></ion-icon>
+			Wrong answer
+		</p>
+		<p class="correct-answer">Answer: <b>{{result | decode}}</b></p>		
+	</div>
+
+	<div class="matching-result-box" *ngIf="typeGame == 'GAME_MATCHING'">
+		<p class="title">
+			<ion-icon name="md-close-circle"></ion-icon>
+			Wrong answer
+		</p>
+		<p class="correct-answer">Good luck next time!</p>
+	</div>
+
+	<div class="bottom-box">
+		<ion-icon name="md-backspace"></ion-icon>
+		<ion-icon name="md-menu"></ion-icon>
+		<ion-icon name="md-arrow-round-forward" (click)="next()"></ion-icon>		
+	</div>
+</div>

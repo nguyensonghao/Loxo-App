@@ -1,0 +1,19 @@
+page-calendar {
+	.note {
+		text-align: center;
+	    font-size: 12px;
+	    padding: 4px;
+	    border-bottom: 1px solid #343434;
+	    padding-bottom: 8px;
+	}
+
+	th {
+		border: none !important;
+	}
+
+	.date {
+		text-align: center;
+	    font-weight: bold;
+	    font-size: 18px;
+	}
+}

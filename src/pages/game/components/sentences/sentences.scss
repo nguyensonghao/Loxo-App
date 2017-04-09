@@ -1,0 +1,90 @@
+sentences-game {
+    .list-question {
+        position: fixed;
+        bottom: 0;
+        background: white;
+        height: 45%;
+        overflow: scroll;
+        overflow-x: hidden;
+        width: 100%;
+
+        .question {
+            padding: 6px;
+
+            .question-answer {
+                ion-icon {
+                    position: relative;
+                    top: 2px;
+                    margin-right: 5px;
+                } 
+
+                .label-md {
+                    white-space: inherit;
+                }
+            }
+        }          
+    }
+
+    .header {
+        background: #387ef5;    
+        overflow: auto;
+        line-height: 24px;
+        position: fixed;
+        bottom: 45%;
+        width: 100%;
+
+        .title {
+            color: white;
+            line-height: 36px;
+
+            ion-icon {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .right {
+            float: right;
+
+            ion-icon {
+                font-size: 36px;
+                color: white;                    
+                margin-left: 20px;
+                margin-right: 15px;                    
+                float: left;
+            }
+
+            ion-icon[name="md-arrow-dropup"] {
+                margin-right: 25px;
+            }
+        }            
+    }      
+    
+    .sentence {
+        padding: 6px;
+    }    
+
+    .button-send {
+        position: fixed;
+        bottom: 50px;
+        border-radius: 40px;
+        right: 30px;
+        height: 40px;
+        width: 40px;
+        -webkit-box-shadow: 0px 9px 25px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 9px 25px -11px rgba(0,0,0,0.75);
+        box-shadow: 0px 9px 25px -11px rgba(0,0,0,0.75);
+
+        ion-icon {
+            font-size: 24px;
+        }
+    }
+
+    .hidden-list-question {
+        bottom: 0;
+    }
+
+    .none {
+        height: 0;
+    }    
+}

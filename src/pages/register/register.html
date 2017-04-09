@@ -1,0 +1,31 @@
+<ion-content color="primary">
+	<div class="content">
+		<h3	class="title-page">TOEIC</h3>
+		<ion-list>
+		  	<ion-item>	    	
+	    		<ion-input type="text" value="" placeholder="Account"></ion-input>
+		  	</ion-item>
+
+		  	<ion-item>	    	
+	    		<ion-input type="text" value="" placeholder="Display name"></ion-input>
+		  	</ion-item>
+
+		  	<ion-item>	    	
+	    		<ion-input type="email" value="" placeholder="Email(*)"></ion-input>
+		  	</ion-item>
+
+		  	<ion-item>	    	
+	    		<ion-input type="password" placeholder="Password"></ion-input>
+		  	</ion-item>	  	
+
+		  	<ion-item>	    	
+	    		<ion-input type="password" placeholder="Confirm password"></ion-input>
+		  	</ion-item>
+		</ion-list>		
+	</div>
+
+	<p class="note">* Email is needed when you forget your password</p>
+	<button ion-button color="light" class="button-register">Register</button>
+	<br/>
+	<a class="go-login" (click)="goLogin()">Back to Login</a>
+</ion-content>

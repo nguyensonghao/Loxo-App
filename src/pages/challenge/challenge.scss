@@ -1,0 +1,12 @@
+page-challenge {
+	.float-button {
+		bottom: 100px !important;
+    	right: 30px !important;    	
+
+    	.button-main>button {
+    		-webkit-box-shadow: 0px 7px 24px -8px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 7px 24px -8px rgba(0,0,0,0.75);
+			box-shadow: 0px 7px 24px -8px rgba(0,0,0,0.75);
+    	}
+	}
+}

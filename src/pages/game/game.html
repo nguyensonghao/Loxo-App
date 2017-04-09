@@ -1,0 +1,74 @@
+<ion-header>
+  	<ion-navbar color="primary">
+    	<ion-title>Game</ion-title>
+
+    	<ion-buttons end class="right-button">
+            <button ion-button icon-only (click)="goSearch()">
+                <ion-icon name="md-share"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-color-palette"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-more"></ion-icon>
+            </button>
+        </ion-buttons>
+  	</ion-navbar>
+</ion-header>
+
+<side-header 
+	[currentGame]="listGame[index]"	
+	[index]="index" (changePage)="changePage($event)"		
+	[numberCard]="listCard.length"
+	[history]="history"
+	*ngIf="!showResultGame && loadDone">
+</side-header>
+
+<ion-content class="practice-container" *ngIf="!showResultGame">
+	<div class="content" *ngIf="loadDone">
+		<div *ngFor="let game of listGame; let i = index">
+			<matching-game
+				[game]="game"
+				(choiceAnswer)="answerQuestion($event)" 
+				[hidden]="index != i"
+				*ngIf="game.gameType == 'GAME_MATCHING'">
+			</matching-game>
+
+			<true-false-game		
+				[game]="game"
+				(choiceAnswer)="answerQuestion($event)"
+				[hidden]="index != i" 
+				*ngIf="game.gameType == 'GAME_TRUE_FALSE'">
+			</true-false-game>
+
+			<multiple-choice-game
+				[game]="game"
+				(choiceAnswer)="answerQuestion($event)"
+				[hidden]="index != i"
+				*ngIf="game.gameType == 'GAME_MULTICHOICES'">
+			</multiple-choice-game>
+
+			<sentences-game
+				[game]="game"
+				(choiceAnswer)="answerQuestion($event)"
+				[hidden]="index != i"
+				*ngIf="game.gameType == 'GAME_SENTENCES'">			
+			</sentences-game>
+		</div>
+	</div>		
+	<answer-box
+		[typeGame]="currentGame"
+		[result]="resultGame"
+		[typeAnswerBox]="resultAnswer"
+		[showAnswer]="showAnswer"
+		(nextCard)="nextCard($event)">
+	</answer-box>			
+</ion-content>
+
+<ion-content class="practice-container not-padding" *ngIf="showResultGame">
+	<div class="content">
+		<result-game
+			[history]="history">
+		</result-game>
+	</div>
+</ion-content>

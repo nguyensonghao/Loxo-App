@@ -1,0 +1,38 @@
+page-card {
+	ion-content > .scroll-content {
+		margin-top: 186px !important;
+	}
+
+	.list-question {
+		span {
+			float: left;
+		    color: #387ef5;
+		    font-size: 14px;
+		    margin-right: 10px;
+		}
+
+		p {
+			margin-left: 10px;
+		}
+
+		.list-card {
+			.card-item {
+			    margin: 6px;
+			    border: 1px solid #ccc;
+			    border-radius: 6px;
+			    padding: 6px;
+
+			    p.mean {
+				    color: gray;
+				    font-style: italic;
+				    margin-top: 4px;
+				}
+
+				p.word {
+				    color: #50a5fd;
+				    margin-bottom: 0px;
+				}
+			}
+		}
+	}	
+}

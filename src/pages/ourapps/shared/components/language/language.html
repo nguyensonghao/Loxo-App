@@ -1,0 +1,17 @@
+<ion-content>
+	<ion-list class="list-language">
+		<div class="language-item" *ngFor="let language of listLanguage">
+			<div class="right">
+				<button ion-button small>
+					<ion-icon name="md-download"></ion-icon> Install
+				</button>
+				<br>
+				<button ion-button small>
+					<ion-icon name="md-share"></ion-icon> Share
+				</button>
+			</div>
+			<img src="" class="flag">
+			<span class="name">{{ language.name  }}</span>
+		</div>
+	</ion-list>
+</ion-content>

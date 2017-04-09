@@ -1,0 +1,57 @@
+<ion-header>
+  	<ion-navbar color="primary">
+    	<ion-title>Setting</ion-title>
+		<ion-buttons end class="right-button">            
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="md-notifications"></ion-icon>
+            </button>
+        </ion-buttons>
+  	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+		<ion-item>
+			<ion-label>
+				<p class="main-title">Sound effects</p>
+				<p class="sub-title">Sound effects in App</p>
+			</ion-label>
+			<ion-toggle [(ngModel)]="soundSetting" (ionChange)="changeSoundSetting()"></ion-toggle>
+		</ion-item>
+		<ion-item>
+			<ion-label>
+				<p class="main-title">Native Language</p>
+				<p class="sub-title">Your native language</p>
+			</ion-label>
+			<ion-toggle checked="false"></ion-toggle>
+		</ion-item>
+		<ion-item class="has-select">
+			<ion-label>
+				<p class="main-title">Daily notification</p>
+				<p class="sub-title">To remind you to study daily</p>
+				<select class="select-item" (change)="changeTimeNotify()" [(ngModel)]="timeNotify">
+					<option *ngFor="let time of listTime">{{time}}</option>					
+				</select>				
+			</ion-label>			
+			<ion-toggle [(ngModel)]="notifySetting" (ionChange)="changeNotifySetting()"></ion-toggle>			
+		</ion-item>
+		<ion-item>
+			<ion-label>
+				<p class="main-title">Public profile</p>
+				<p class="sub-title">Others can see your profile</p>
+			</ion-label>
+			<ion-toggle [(ngModel)]="publicProfileSetting" (ionChange)="changePublicProfileSetting()"></ion-toggle>
+		</ion-item>
+		<ion-item class="item-select">			
+			<ion-label>
+				<select class="select-right">
+					<option>3 times</option>
+					<option>4 times</option>
+				</select>
+				<p class="main-title">Number of corrects</p>
+				<p class="sub-title">Number of consecutive corrects to pass as question</p>
+			</ion-label>			
+		</ion-item>
+	</ion-list>
+</ion-content>

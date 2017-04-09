@@ -1,0 +1,72 @@
+<ion-list class="list-setting">  	
+	<div class="header-setting">
+  		<p class="title-main">Your preferred games</p>  		
+	</div>
+	<div class="setting-item setting-game">
+		<ul>
+  			<li>  				
+				<ion-checkbox color="light" [(ngModel)]="gameSetting['matching']" (ionChange)="changeGameSetting()"></ion-checkbox>
+				<span>Matching</span>								
+  			</li>
+			<li>  								
+				<ion-checkbox color="light" [(ngModel)]="gameSetting['multichoices']" (ionChange)="changeGameSetting()"></ion-checkbox>				
+				<span>Multiple-choice</span>
+  			</li>
+			<li>  								
+				<ion-checkbox color="light" [(ngModel)]="gameSetting['memorize']" (ionChange)="changeGameSetting()"></ion-checkbox>
+				<span>Memorize</span>				
+  			</li>
+			<li>  								
+				<ion-checkbox color="light" [(ngModel)]="gameSetting['truefalse']" (ionChange)="changeGameSetting()"></ion-checkbox>
+				<span>True/False</span>				
+  			</li>
+  		</ul>
+	</div>  	  
+  	<div class="setting-item">		
+		<select class="right-box" [(ngModel)]="numberQuestion" (ngModelChange)="changeNumberQuestion($event)">
+			<option [ngValue]="5">5</option>
+			<option [ngValue]="10">10</option>
+			<option [ngValue]="15">15</option>
+			<option [ngValue]="20">20</option>
+			<option [ngValue]="25">25</option>
+		</select>		
+		<div class="left-box">  		
+  			<p class="label-main">Number of questions</p>
+  			<p class="label-sub">For each practice</p>  			
+		</div>
+  	</div>
+  	<div class="setting-item">
+		<ion-toggle [(ngModel)]="listen" class="right-box" (ionChange)="changeListen()"></ion-toggle>
+  		<div class="left-box">
+  			<p class="label-main">Listening exercises</p>
+  		</div>    	
+  	</div>
+  	<div class="setting-item">
+		<ion-toggle [(ngModel)]="sound" class="right-box" (ionChange)="changeSound()"></ion-toggle>
+  		<div class="left-box">
+  			<p class="label-main">Sound effects</p>
+  		</div>    	
+  	</div>
+  	<div class="setting-item">
+		<select class="right-box" [(ngModel)]="questionPriority" (ngModelChange)="changeQuestionPriority($event)">
+			<option [ngValue]="0">New first</option>
+			<option [ngValue]="1">Incorrect first</option>			
+		</select>
+  		<div class="left-box">
+  			<p class="label-main">Question priority</p>
+  			<p class="label-sub">Question you want to study/practice first</p>  			
+  		</div>				
+  	</div>
+  	<div class="setting-item">
+		<select class="right-box" [(ngModel)]="sortQuestion" (ngModelChange)="changeSortQuestion($event)">
+			<option [ngValue]="0">Default style</option>
+			<option [ngValue]="1">By name</option>
+			<option [ngValue]="2">Practice time</option>
+			<option [ngValue]="3">Created time</option>			
+		</select>
+  		<div class="left-box">
+  			<p class="label-main">Sort order</p>
+  			<p class="label-sub">View order of topic</p>  			
+  		</div>				
+  	</div>
+</ion-list>

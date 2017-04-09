@@ -1,0 +1,43 @@
+<div class="sentence-container" *ngIf="game">
+	<div class="sentence">
+        <div [innerHTML]="game.sentence.text | decode"></div>		
+	</div>
+
+    <div class="header" [ngClass]="hiddenListQuestion ? 'hidden-list-question' : ''">
+        <div class="right">                
+            <ion-icon name="md-arrow-dropdown" (click)="showQuestion(false)"></ion-icon>                                
+            <ion-icon name="md-arrow-dropup" (click)="showQuestion(true)"></ion-icon>
+        </div>
+
+        <div class="title">
+            <ion-icon name="md-help"></ion-icon>
+            <span>Question</span>
+        </div>            
+    </div>
+
+	<div class="list-question" [ngClass]="hiddenListQuestion ? 'none' : ''">        
+        <div class="question" *ngFor="let question of game.listQuestion; let i = index">
+            <div class="question-text">
+                <p>{{i + 1}}. {{question.question.text | decode}}</p>
+            </div>
+            <div class="question-answer">
+                <ion-list [ngClass]="listAnswer[question.id]">		  	
+                    <ion-item *ngFor="let answer of question.listAnswer" 
+                        (click)="choiceResult(answer, question)"
+                        [ngClass]="listAnswer[answer.text]">
+
+                        <ion-icon name="{{genIconName(listAnswer[answer.text])}}"></ion-icon>
+                        <span>{{answer.text | decode}}</span>
+                        <!--<ion-radio value="{{answer.text}}"></ion-radio>
+                        <ion-label>{{answer.text | decode}}</ion-label>-->
+
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>		
+	</div>
+
+    <button ion-button class="button-send" (click)="submit()">
+        <ion-icon name="ios-send"></ion-icon>
+    </button>
+</div>

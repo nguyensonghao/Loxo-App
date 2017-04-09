@@ -1,0 +1,11 @@
+<div class="match-container">
+	<ion-row>	
+		<ion-col col-6 class="box-container" *ngFor="let box of game.listBox">
+			<div class="box" [ngClass]="listClass[box.id]" 
+				(click)="clickBox(box)">
+				<div class="type" [hidden]="listClass[box.id] != 'card-correct' && listClass[box.id] != 'card-correct-2'">{{box.type}}</div>
+				<p class="box-text">{{box.box.text | decode}}</p>
+			</div>
+		</ion-col>
+	</ion-row>
+</div>

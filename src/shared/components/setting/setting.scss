@@ -1,0 +1,88 @@
+setting {
+	ion-label {
+		white-space: normal !important;
+	}
+
+	.title-main {
+		text-align: center;
+    	color: black;
+		margin: 10px;
+	}
+
+	.title-sub {
+		font-size: 11px;
+	    color: black;
+	    margin-top: 6px;
+	    text-align: center;
+	}
+
+	.label-sub {
+	    font-size: 11px !important;
+	    font-style: italic;    
+		margin-top: -4px;
+    	color: gray;
+	}
+
+	.label-main {
+	    font-size: 13px !important;
+	    color: black !important;
+		margin-top: 10px;
+    	margin-bottom: 10px;		
+	}
+
+	.setting-item {
+		border-bottom: 1px solid #3474e1 !important;
+
+		select {
+			height: 30px !important;
+    		min-width: 50px !important;
+			font-size: 13px;
+		}
+
+		.right-box {
+			float: right;
+			margin-right: 10px;
+		}
+
+		.left-box {
+			padding-left: 6px;
+		}
+	}
+
+	.setting-game {		
+		ul {
+			margin: 0;
+			padding-left: 10px;
+			overflow: hidden;
+
+			li {
+				list-style: none;
+				height: 32px;
+
+				ion-checkbox {
+					float: right;
+					margin-right: 15px;
+				}				
+			}
+		}	
+
+		.checkbox-icon {
+			height: 24px;
+			width: 24px;
+			border: 1px solid #828282;
+			border-radius: 0 !important;
+
+			.checkbox-inner {
+				top: -2px;
+				left: 6px;
+				width: 10px;
+				height: 20px;
+				border-color: #1a941a;
+			}
+		}				
+	}
+
+	.popover-viewport {
+		overflow-x: hidden
+	}
+}

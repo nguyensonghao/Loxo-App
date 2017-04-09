@@ -1,0 +1,15 @@
+<correct-answer-box
+    *ngIf="typeAnswerBox"
+    [typeGame]="typeGame"
+    [result]="result"
+    [showAnswer]="showAnswer"
+    (nextGame)="next($event)">
+</correct-answer-box>
+
+<wrong-answer-box
+    *ngIf="!typeAnswerBox"
+    [typeGame]="typeGame"
+    [result]="result"
+    [showAnswer]="showAnswer"
+    (nextGame)="next($event)">
+</wrong-answer-box>
